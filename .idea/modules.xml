@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CustomView.iml" filepath="$PROJECT_DIR$/CustomView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/CustomView.api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/CustomView.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CustomView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CustomView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/complier/CustomView.complier.iml" filepath="$PROJECT_DIR$/.idea/modules/complier/CustomView.complier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jetpack/CustomView.jetpack.iml" filepath="$PROJECT_DIR$/.idea/modules/jetpack/CustomView.jetpack.iml" />
     </modules>
   </component>
 </project>

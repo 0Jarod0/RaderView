@@ -3,4 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
+    <color name="color_ff345a">#ff345a</color>
+    <array name="splash_circle_colors">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorAccent</item>
+        <item>@color/color_000000</item>
+        <item>@color/color_e5e5e5</item>
+        <item>@color/color_ff345a</item>
+
+    </array>
+    <color name="buttonLabel">#FFFFFF</color>
 </resources>

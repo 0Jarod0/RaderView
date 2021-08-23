@@ -5,10 +5,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by haha on 2019/5/15.
@@ -110,6 +111,7 @@ public class RadarView extends View {
             canvas.drawPath(anglePath, valuePaint);
         }
 
+        //在画这个图之前 可以先把所有的定点都写死 这样便于思考逻辑
 //        Path mPath = new Path();
 //        for (int i=0;i<8;i++){
 //            float radius = mRadius - internal*i;

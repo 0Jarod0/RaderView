@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation fileTree(dir: 'lib',include: ['*.jar'])
+
+    //依赖module api
+    implementation project(':api')
+
+    //主要作用是注解Processor类，并对其生成META-INF的配置信息
+    //可以让你不用去写META-INF这些配置文件
+    //只要在自定义的Processor 上面加上@AutoService(Processor.class)
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+
+    implementation 'com.squareup:javapoet:1.11.1'
+}
+
+//使用jdk1。7
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

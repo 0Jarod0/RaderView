@@ -1,22 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.haha.customview">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
+        android:name="com.example.haha.MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:hardwareAccelerated="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.haha.deeplink.DeepLinkActivity"></activity>
+        <!-- .MainActivity -->
+        <activity android:name="com.example.haha.viewmodel.LiveActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.WrapLinearLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AutoBannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BezierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RadarViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.JiaoziVideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FlexibleLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FirstActivity"
+            android:process=":remote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SecondActivity"
+            android:process="com.example.haha.customview.activity.remote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WindowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CardViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HandThreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ThreadTest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LinkageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecyclerviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recycler.AddHeaderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.haha.hilt.activity.HiltSimpleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.haha.room.NewWordActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.example.haha.widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.widget.UPDATE_ALL" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget" />
+        </receiver>
+
+        <service android:name="com.example.haha.widget.WidgetService">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APP_WIDGET_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.haha.lifecycle.MyLocationService" />
     </application>
 
 </manifest>
